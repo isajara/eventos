@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejercicio3</title>
+</head>
+
+	<style>
+    .primerperiodo{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+
+.titulo
+{
+	font-size: 50px;
+font-family: Freestyle Script;
+color: black;
+}
+
+.cuadrito
+{
+position: absolute;
+top: 250px;
+left: 370px;
+width: 650px;
+height: 100px;
+background-color: black;
+font-size: 80px;
+font-family: Freestyle Script;
+color: white;
+}
+
+.ejercicio2{
+  position: absolute;
+  top: 500px;
+  left: 700px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .ejercicio1{
+  position: absolute;
+  top: 500px;
+  left: 550px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }	
+
+#mousePositions
+{
+	color:none;
+    height:300px;
+    width:150px;
+
+}
+	</style>
+
+	<script >
+function position(event)
+{   
+	var x = event.clientX;
+    var y = event.clientY;
+   
+     if (y>=250&&y<=350 && x>=370&&x<=1020) 
+	{
+		cuadrito.innerHTML="Estoy dentro";
+    }
+    else
+    {
+     cuadrito.innerHTML="Estoy por fuera";
+    }
+}
+
+
+
+	</script>
+
+	<body background="fondo.jfif" style="background-repeat: no-repeat;background-size: cover;" onmousemove="position(event)">
+     <a class="primerperiodo" href=" https://isajara.github.io/periodo1/">Primer periodo</a>
+	<center><div class="cuadrito" id="cuadrito"></div></center>
+	<div class="titulo"><center><h1>Control posición del mouse</h1></center></div>
+	<div id="mousePositions">
+
+		<a class="ejercicio1" href="index.html">ejercicio 1</a>
+        <a class="ejercicio2" href="ejercicio2.html">ejercicio 2</a>
+
+</body>
+</html>

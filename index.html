@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cuenta regresiva</title>
+	<script >
+		var numero =11;
+	</script>
+</head>
+<body background="fondo.jfif" style="background-repeat: no-repeat;background-size: cover;"  onload="hola()">
+	 <a class="primerperiodo" href=" https://isajara.github.io/periodo1/">Primer periodo</a>
+	<center><div class="cuadrito" id="cuadrito"> HOLA</div></center>
+	<div class="titulo"><center><h1>Cuenta Regresiva</h1></center></div>
+
+	<style>
+		.primerperiodo{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+.titulo
+{
+	font-size: 50px;
+font-family: Freestyle Script;
+color: black;
+}
+
+.cuadrito
+{
+position: absolute;
+top: 250px;
+left: 370px;
+width: 650px;
+height: 100px;
+background-color: black;
+font-size: 80px;
+font-family: Freestyle Script;
+color: white;
+}	
+
+ .ejercicio3{
+  position: absolute;
+  top: 500px;
+  left: 700px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .ejercicio2{
+  position: absolute;
+  top: 500px;
+  left: 550px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+	</style>
+
+	<script >
+	function cuenta()
+	{   
+		console.log(numero);
+		numero=numero-1;
+		cuadrito=document.getElementById('cuadrito');
+		cuadrito.innerHTML=numero;
+		if(numero==-1)
+		{
+			clearInterval(cuenta);
+			cuadrito.innerHTML="La cuenta terminó";
+			console.log("La cuenta terminó");
+		}
+	}
+
+	function hola()
+	{
+		console.log("hola");
+	    cuenta=setInterval(cuenta,1000);
+
+	}
+
+
+	</script>
+<a class="ejercicio2" href="ejercicio2.html">ejercicio 2</a>
+<a class="ejercicio3" href="ejercicio3.html">ejercicio 3</a>
+</body>
+</html>

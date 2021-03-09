@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejercicio2</title>
+	<script> vector=[];  </script>
+</head>
+<style>
+  .primerperiodo{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+
+	.titulo
+{
+	font-size: 50px;
+font-family: Freestyle Script;
+color: black;
+}
+
+.cuadro
+{
+position: absolute;
+top: 200px;
+left: 370px;
+width: 650px;
+height: 270px;
+background-color: black;
+font-size: 80px;
+font-family: Freestyle Script;
+color: white;
+}	
+
+.ejercicio3{
+  position: absolute;
+  top: 500px;
+  left: 700px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .ejercicio1{
+  position: absolute;
+  top: 500px;
+  left: 550px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+</style>
+
+<script>
+	function ingresar() 
+	{
+		vector[vector.length]=document.getElementById("ingresar").value;
+		document.getElementById("ingresar").value="";
+
+		if(vector.length>5)
+		{
+			alert("No se pueden ingresa más de 5 valores");
+			vector.pop();
+		}
+
+    }
+
+    function maximo()
+    {
+    	if(vector.length>=1)
+    	{
+    	y=Math.max(...vector);
+    	cuadrito.innerHTML=y;
+    	}
+    	else
+    	{
+    	y="No hay valores";
+    	cuadrito.innerHTML=y;	
+    	}
+      }
+
+</script>
+
+
+<body background="fondo.jfif" style="background-repeat: no-repeat;background-size: cover;" >
+   <a class="primerperiodo" href=" https://isajara.github.io/periodo1/">Primer periodo</a>
+	<div class="titulo"><center><h1>Buscar numero mayor</h1></center></div>
+
+<center><div class="cuadro" id="cuadro">
+	<input type="number" placeholder="Ingresa los valores" id="ingresar"><br>
+
+	<input type="button" value="ingresar" onclick="ingresar();">
+
+	<button onclick="maximo();">Ver el valor maximo</button>
+
+	<div id="cuadrito"></div>
+</div></center>
+
+<a class="ejercicio1" href="index.html">ejercicio 1</a>
+<a class="ejercicio3" href="ejercicio3.html">ejercicio 3</a>
+
+</body>
+</html>
